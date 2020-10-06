@@ -1,0 +1,94 @@
+[
+  {
+    "id": "Modelica.Electrical",
+    "displayLabel": "Electrical",
+    "nodeType": "collection",
+    "svgPath": "https://hostname:port/assets/Modelica.Electrical.svg",
+    "children": [
+      {
+        "id": "Modelica.Electrical.Analog",
+        "displayLabel": "Analog",
+        "nodeType": "collection",
+        "svgPath": "https://hostname:port/assets/Modelica.Electrical.Analog.svg",
+        "children": [
+          {
+            "id": "Modelica.Electrical.Analog.Basic.Inductor",
+            "displayLabel": "Analog Inductor",
+            "nodeType": "component",
+            "svgPath": "./Modelica.Electrical.Analog.Basic.Inductor.svg",
+            "size": {
+              "width": 310,
+              "height": 210
+            },
+            "connectors": [],
+            "parameters": []
+          },
+          {
+            "id": "Modelica.Electrical.Analog.Basic.Resistor",
+            "displayLabel": "Analog Resistor",
+            "nodeType": "component",
+            "svgPath": "./Modelica.Electrical.Analog.Basic.Resistor.svg",
+            "size": {
+              "width": 310,
+              "height": 210
+            },
+            "connectors": [],
+            "parameters": []
+          },
+          {
+            "id": "Modelica.Electrical.Analog.Sources.SignalVoltage",
+            "displayLabel": "Analog Signal Voltage",
+            "nodeType": "component",
+            "svgPath": "./Modelica.Electrical.Analog.Sources.SignalVoltage.svg",
+            "size": {
+              "width": 310,
+              "height": 210
+            },
+            "connectors": [],
+            "parameters": []
+          },
+          {
+            "id": "Modelica.Electrical.Analog.Basic.Ground",
+            "displayLabel": "Analog Ground",
+            "nodeType": "component",
+            "svgPath": "./Modelica.Electrical.Analog.Basic.Ground.svg",
+            "size": {
+              "width": 310,
+              "height": 210
+            },
+            "connectors": [],
+            "parameters": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Modelica.Foo",
+    "displayLabel": "Foo",
+    "nodeType": "collection",
+    "svgPath": "https://hostname:port/assets/Modelica.Electrical.svg",
+    "children": [
+      {
+        "id": "Modelica.Foo.Analog",
+        "displayLabel": "Analog",
+        "nodeType": "collection",
+        "svgPath": "https://hostname:port/assets/Modelica.Electrical.Analog.svg",
+        "children": [
+          {
+            "id": "Modelica.Foo.Analog.Basic.Inductor",
+            "displayLabel": "Analog Inductor",
+            "nodeType": "component",
+            "svgPath": "./Modelica.Electrical.Analog.Basic.Inductor.svg",
+            "size": {
+              "width": 310,
+              "height": 210
+            },
+            "connectors": [],
+            "parameters": []
+          }
+        ]
+      }
+    ]
+  }
+]

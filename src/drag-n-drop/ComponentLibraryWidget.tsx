@@ -1,21 +1,24 @@
-import styled from "@emotion/styled";
 import React from "react";
-import { LibraryItemWidget } from "./LibraryItemWidget";
+import styled from "@emotion/styled";
+import { TreeView } from "@material-ui/lab";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import LibraryItem from "./LibraryItem";
+import componentJson from "../library-nodes.json";
 import { Application } from "../Application";
-import { OMComponent } from "../domain-model/OMComponent";
 
 export interface ComponentLibraryWidgetProps {
   app: Application;
 }
 
-export const Library = styled.div`
-  min-width: 200px;
+const Library = styled.div`
+  min-width: 250px;
   background: rgb(30, 30, 30);
   flex-grow: 0;
   flex-shrink: 0;
 `;
 
-export const WidgetHeaderBar = styled.div`
+const WidgetHeaderBar = styled.div`
   color: white;
   font-family: Helvetica, Arial, serif;
   padding: 5px;
@@ -28,30 +31,18 @@ export class ComponentLibraryWidget extends React.Component<
   ComponentLibraryWidgetProps
 > {
   render() {
-    let libraryItemWidgets: JSX.Element[] = [];
-    this.props.app
-      .getComponentLibrary()
-      .getAllComponents()
-      .forEach((component) => {
-        libraryItemWidgets.push(this.getLibraryItemWidget(component));
-      });
     return (
       <Library>
         <WidgetHeaderBar>Component Library</WidgetHeaderBar>
-        {libraryItemWidgets}
+        <TreeView
+          defaultCollapseIcon={<ExpandMoreIcon />}
+          defaultExpandIcon={<ChevronRightIcon />}
+        >
+          {componentJson.map((node) => (
+            <LibraryItem key={node.id} node={node} />
+          ))}
+        </TreeView>
       </Library>
-    );
-  }
-
-  private getLibraryItemWidget(component: OMComponent) {
-    return (
-      <LibraryItemWidget
-        nodeEventData={{
-          componentId: component.componentId,
-        }}
-        key={component.componentId}
-        name={component.displayLabel}
-      />
     );
   }
 }

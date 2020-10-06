@@ -4,6 +4,7 @@ import createEngine, {
 } from "@projectstorm/react-diagrams";
 import { OMComponentFactory } from "./custom-nodes/omcomponent/OMComponentFactory";
 import { OMComponentLibrary } from "./domain-model/OMComponentLibrary";
+import libraryNodes from "./library-nodes.json";
 
 export class Application {
   protected activeModel: DiagramModel;
@@ -13,7 +14,7 @@ export class Application {
   constructor() {
     this.diagramEngine = createEngine();
     this.init();
-    this.componentLibrary = new OMComponentLibrary();
+    this.componentLibrary = new OMComponentLibrary(libraryNodes);
   }
 
   public init() {
